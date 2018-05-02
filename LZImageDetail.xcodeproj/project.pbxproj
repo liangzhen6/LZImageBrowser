@@ -151,15 +151,9 @@
 		FA268B2A208F29960003D558 /* LZImageDetail */ = {
 			isa = PBXGroup;
 			children = (
+				FA4E32CF209980A0004DEB17 /* LZIamgeBrowser */,
 				FA268B2B208F29960003D558 /* AppDelegate.h */,
 				FA268B2C208F29960003D558 /* AppDelegate.m */,
-				FA6DD8BF20941F9D00FC810D /* LZImageBrowserHeader.h */,
-				FA6DD8C02094204D00FC810D /* LZImageBrowserMainView.h */,
-				FA6DD8C12094204D00FC810D /* LZImageBrowserMainView.m */,
-				FA6DD8C32094207700FC810D /* LZImageBrowserSubView.h */,
-				FA6DD8C42094207700FC810D /* LZImageBrowserSubView.m */,
-				FA6DD8C62094212700FC810D /* LZImageBrowserModel.h */,
-				FA6DD8C72094212700FC810D /* LZImageBrowserModel.m */,
 				FA268B2E208F29960003D558 /* ViewController.h */,
 				FA268B2F208F29960003D558 /* ViewController.m */,
 				FA268B31208F29960003D558 /* Main.storyboard */,
@@ -187,6 +181,20 @@
 				FA268B51208F29980003D558 /* Info.plist */,
 			);
 			path = LZImageDetailUITests;
+			sourceTree = "<group>";
+		};
+		FA4E32CF209980A0004DEB17 /* LZIamgeBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				FA6DD8BF20941F9D00FC810D /* LZImageBrowserHeader.h */,
+				FA6DD8C02094204D00FC810D /* LZImageBrowserMainView.h */,
+				FA6DD8C12094204D00FC810D /* LZImageBrowserMainView.m */,
+				FA6DD8C32094207700FC810D /* LZImageBrowserSubView.h */,
+				FA6DD8C42094207700FC810D /* LZImageBrowserSubView.m */,
+				FA6DD8C62094212700FC810D /* LZImageBrowserModel.h */,
+				FA6DD8C72094212700FC810D /* LZImageBrowserModel.m */,
+			);
+			path = LZIamgeBrowser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,7 +566,10 @@
 				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = LZImageDetail/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = SH.LZImageDetail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -574,7 +585,10 @@
 				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = LZImageDetail/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = SH.LZImageDetail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -589,7 +603,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = LZImageDetailTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = SH.LZImageDetailTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -605,7 +623,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = LZImageDetailTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = SH.LZImageDetailTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -620,7 +642,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = LZImageDetailUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = SH.LZImageDetailUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -635,7 +661,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4E6298X77;
 				INFOPLIST_FILE = LZImageDetailUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = SH.LZImageDetailUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

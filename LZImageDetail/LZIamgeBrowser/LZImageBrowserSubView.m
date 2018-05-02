@@ -79,8 +79,8 @@
     
     CGFloat imageW = _imageBrowserModel.bigImageSize.width;
     CGFloat imageH = _imageBrowserModel.bigImageSize.height;
-    
     CGFloat height =  Screen_Width * imageH/imageW;
+
     if (imageH/imageW > Screen_Height/Screen_Width) {
         //长图
         self.subImageView.frame =CGRectMake(0, 0, Screen_Width, height);
@@ -161,13 +161,17 @@
         _subScrollView.alwaysBounceVertical = YES;//设置上下回弹
         _subScrollView.showsVerticalScrollIndicator = NO;
         _subScrollView.showsHorizontalScrollIndicator = NO;
+        if (@available(iOS 11.0, *)) {
+            //表示只在ios11以上的版本执行
+            _subScrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
     }
     return _subScrollView;
 }
 - (UIImageView *)subImageView {
     if (_subImageView == nil) {
         _subImageView = [[UIImageView alloc] init];
-        _subScrollView.center = CGPointMake(Screen_Width / 2, Screen_Height / 2);
+        _subImageView.contentMode = UIViewContentModeScaleAspectFit;
     }
     return _subImageView;
 }
