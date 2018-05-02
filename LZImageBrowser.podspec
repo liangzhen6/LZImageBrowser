@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                   这是一个仿微信朋友圈的图片查看器。
+                   这是一个仿微信朋友圈的图片查看器，只需两行代码即可实现，大家喜欢的github给个星，谢谢
                    DESC
 
   s.homepage     = "https://github.com/liangzhen6/LZImageBrowser"
