@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LZImageBrowser"
-  s.version      = "1.0.1"
+  s.version      = "1.0.0"
   s.summary      = "A image browser like wechat."
 
   # This description is used to generate tags and improve search results.
@@ -53,7 +53,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "shenzhenshihua" => "liangz@szmn.com.cn" }
+  s.author             = { "liangzhen" => "3204792702@qq.com" }
   # Or just: s.author    = "shenzhenshihua"
   # s.authors            = { "shenzhenshihua" => "liangz@szmn.com.cn" }
   # s.social_media_url   = "http://twitter.com/shenzhenshihua"
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "git@github.com:liangzhen6/LZImageBrowser.git", :tag => "1.0.1" }
+  s.source       = { :git => "https://github.com/liangzhen6/LZImageBrowser.git", :tag => "1.0.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
