@@ -7,7 +7,7 @@
 //
 
 #import "LZImageBrowserModel.h"
-#import <SDImageCache.h>
+#import <SDWebImage/SDImageCache.h>
 #import "LZImageBrowserHeader.h"
 
 @implementation LZImageBrowserModel
