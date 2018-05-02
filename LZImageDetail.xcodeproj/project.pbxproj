@@ -151,7 +151,7 @@
 		FA268B2A208F29960003D558 /* LZImageDetail */ = {
 			isa = PBXGroup;
 			children = (
-				FA4E32CF209980A0004DEB17 /* LZIamgeBrowser */,
+				FA4E32CF209980A0004DEB17 /* LZImageBrowser */,
 				FA268B2B208F29960003D558 /* AppDelegate.h */,
 				FA268B2C208F29960003D558 /* AppDelegate.m */,
 				FA268B2E208F29960003D558 /* ViewController.h */,
@@ -183,7 +183,7 @@
 			path = LZImageDetailUITests;
 			sourceTree = "<group>";
 		};
-		FA4E32CF209980A0004DEB17 /* LZIamgeBrowser */ = {
+		FA4E32CF209980A0004DEB17 /* LZImageBrowser */ = {
 			isa = PBXGroup;
 			children = (
 				FA6DD8BF20941F9D00FC810D /* LZImageBrowserHeader.h */,
@@ -194,7 +194,7 @@
 				FA6DD8C62094212700FC810D /* LZImageBrowserModel.h */,
 				FA6DD8C72094212700FC810D /* LZImageBrowserModel.m */,
 			);
-			path = LZIamgeBrowser;
+			path = LZImageBrowser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
