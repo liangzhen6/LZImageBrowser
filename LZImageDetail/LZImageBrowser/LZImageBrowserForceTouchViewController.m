@@ -8,7 +8,7 @@
 
 #import "LZImageBrowserForceTouchViewController.h"
 #import "LZImageBrowserHeader.h"
-#import <UIImageView+WebCache.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 @interface LZImageBrowserForceTouchViewController ()
 
 @end
