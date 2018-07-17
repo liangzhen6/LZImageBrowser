@@ -16,11 +16,12 @@
 @property(nonatomic,copy)NSArray * originImageViews;
 
 @property(nonatomic,weak)UIViewController * controller;
-
+@property(nonatomic,copy)ForceTouchActionBlock forceTouchActionBlock;
+@property(nonatomic,copy)NSArray * previewActionTitls;
 @end
 @implementation LZImageBrowserManger
 
-+ (id)imageBrowserMangerWithUrlStr:(NSArray<NSString *>*)imageUrls originImageViews:(NSArray<UIImageView *>*)originImageViews originController:(UIViewController *)controller forceTouch:(BOOL)forceTouchCapability {
++ (id)imageBrowserMangerWithUrlStr:(NSArray<NSString *>*)imageUrls originImageViews:(NSArray<UIImageView *>*)originImageViews originController:(UIViewController *)controller forceTouch:(BOOL)forceTouchCapability forceTouchActionTitles:(nullable NSArray <NSString *>*)titles forceTouchActionComplete:(nullable ForceTouchActionBlock)forceTouchActionBlock {
     LZImageBrowserManger *imageBrowserManger = [[LZImageBrowserManger alloc] init];
     imageBrowserManger.imageUrls = imageUrls;
     imageBrowserManger.originImageViews = originImageViews;
@@ -29,6 +30,11 @@
     if (forceTouchCapability) {
         [imageBrowserManger initForceTouch];
     }
+    if (forceTouchCapability && titles.count) {
+        imageBrowserManger.previewActionTitls = titles;
+        imageBrowserManger.forceTouchActionBlock = forceTouchActionBlock;
+    }
+    
     return imageBrowserManger;
 }
 - (void)showImageBrowser {
@@ -58,6 +64,10 @@
     LZImageBrowserForceTouchViewController * forceTouchController = [[LZImageBrowserForceTouchViewController alloc] init];
     forceTouchController.showOriginForceImage = showOriginForceImage;
     forceTouchController.showForceImageUrl = showForceImageUrl;
+    if (self.previewActionTitls.count) {
+        forceTouchController.previewActionTitls = self.previewActionTitls;
+        forceTouchController.forceTouchActionBlock = self.forceTouchActionBlock;
+    }
 
     CGFloat showImageViewW;
     CGFloat showImageViewH;

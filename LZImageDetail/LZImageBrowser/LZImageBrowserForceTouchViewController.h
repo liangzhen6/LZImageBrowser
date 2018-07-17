@@ -6,10 +6,13 @@
 //  Copyright © 2018年 shenzhenshihua. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
+typedef void(^ForceTouchActionBlock)(NSInteger selectIndex, NSString *title);
 
-@interface LZImageBrowserForceTouchViewController : ViewController
+@interface LZImageBrowserForceTouchViewController : UIViewController
 @property(nonatomic,strong)UIImage *showOriginForceImage;
 @property(nonatomic,copy)NSString *showForceImageUrl;
+@property(nonatomic,copy)NSArray * previewActionTitls;
+@property(nonatomic,copy)ForceTouchActionBlock forceTouchActionBlock;
 
 @end

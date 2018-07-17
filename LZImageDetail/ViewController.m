@@ -51,27 +51,18 @@
     }
     
     NSArray * bigImages = @[@"http://olxnvuztq.bkt.clouddn.com/b01.jpg",@"http://olxnvuztq.bkt.clouddn.com/b02.jpg",@"http://olxnvuztq.bkt.clouddn.com/b03.jpg",@"http://olxnvuztq.bkt.clouddn.com/b04.jpg",@"http://olxnvuztq.bkt.clouddn.com/b05.jpg",@"http://olxnvuztq.bkt.clouddn.com/b06.jpg"];
-    LZImageBrowserManger *imageBrowserManger = [LZImageBrowserManger imageBrowserMangerWithUrlStr:bigImages originImageViews:originImageViews originController:self forceTouch:YES];
-    
+    //初始化 manger
+    LZImageBrowserManger *imageBrowserManger = [LZImageBrowserManger imageBrowserMangerWithUrlStr:bigImages originImageViews:originImageViews originController:self forceTouch:YES forceTouchActionTitles:@[@"赞", @"评论", @"收藏"] forceTouchActionComplete:^(NSInteger selectIndex, NSString *title) {
+        NSLog(@"当前选中%ld--标题%@",(long)selectIndex, title);
+    }];
+
     _imageBrowserManger = imageBrowserManger;
 }
 
 - (void)imageTouchAction:(UIGestureRecognizer *)ges {
+    //点击了的某一个 imageView
     _imageBrowserManger.selectPage = ges.view.tag;
     [_imageBrowserManger showImageBrowser];
-}
-
-//如果你需要为3Dtouch 上划增加事件 在当前视图控制器重写 下面的方法
-- (NSArray<id<UIPreviewActionItem>> *)previewActionItems {
-    NSMutableArray * previewActionItems = [[NSMutableArray alloc] init];
-    NSArray * previewActionTitls = @[@"赞", @"评论", @"收藏"];
-    for (NSInteger i = 0; i < previewActionTitls.count; i++) {
-        UIPreviewAction *previewAction = [UIPreviewAction actionWithTitle:previewActionTitls[i] style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
-            NSLog(@"当前选中为:%@",previewActionTitls[i]);
-        }];
-        [previewActionItems addObject:previewAction];
-    }
-    return [previewActionItems copy];
 }
 
 - (void)didReceiveMemoryWarning {

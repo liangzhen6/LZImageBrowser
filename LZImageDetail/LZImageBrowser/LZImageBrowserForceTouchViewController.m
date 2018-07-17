@@ -40,6 +40,23 @@
     showImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:showImageView];
 }
+
+//如果你需要为3Dtouch上滑增加事件 在当前视图控制器重写 下面的方法
+- (NSArray<id<UIPreviewActionItem>> *)previewActionItems {
+    NSMutableArray * previewActionItems = [[NSMutableArray alloc] init];
+    __weak LZImageBrowserForceTouchViewController * weakSelf = self;
+    for (NSInteger i = 0; i < self.previewActionTitls.count; i++) {
+        UIPreviewAction *previewAction = [UIPreviewAction actionWithTitle:self.previewActionTitls[i] style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+            if (weakSelf.forceTouchActionBlock) {
+                weakSelf.forceTouchActionBlock(i, self.previewActionTitls[i]);
+            }
+        }];
+        [previewActionItems addObject:previewAction];
+    }
+    return [previewActionItems copy];
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

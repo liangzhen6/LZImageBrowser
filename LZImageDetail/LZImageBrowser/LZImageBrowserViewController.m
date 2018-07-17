@@ -89,9 +89,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)dealloc {
-    NSLog(@"控制器销毁");
-}
+
 /*
 #pragma mark - Navigation
 
