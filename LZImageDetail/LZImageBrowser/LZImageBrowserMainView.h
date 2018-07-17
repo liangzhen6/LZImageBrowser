@@ -7,8 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LZImageBrowserModel;
+
+@protocol LZImageBrowserMainViewDelegate <NSObject>
+/* 单击 后的操作 */
+- (void)imageBrowserMianViewSingleTapWithModel:(LZImageBrowserModel *)imageBrowserModel;
+/* 改变主视图 的 透明度 */
+- (void)imageBrowserMainViewTouchMoveChangeMainViewAlpha:(CGFloat)alpha;
+
+@end
 
 @interface LZImageBrowserMainView : UIView
+@property(nonatomic,weak)id<LZImageBrowserMainViewDelegate>delegate;
+
+@property(nonatomic,strong)NSMutableArray * dataSource;
+@property(nonatomic,assign)NSInteger selectPage;
 
 /**
  初始化主视图
@@ -21,13 +34,10 @@
 + (id)imageBrowserMainViewUrlStr:(NSArray<NSString *>*)imageUrls originImageViews:(NSArray<UIImageView *>*)originImageViews selectPage:(NSInteger)selectPage;
 
 /**
- 展示主视图的方法
- */
-- (void)showImageBrowserMainView;
+ 隐藏子组件
 
-/**
- 移除主视图的方法
+ @param isHidden 是否隐藏
  */
-- (void)dismissImageBrowserMainView;
+- (void)subViewHidden:(BOOL)isHidden;
 
 @end

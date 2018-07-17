@@ -53,8 +53,8 @@
 
 //单击 退出
 - (void)singleTapAction:(UITapGestureRecognizer *)singleTap {
-    if ([self.deleagte respondsToSelector:@selector(imageBrowserSubViewSingleTapWithModel:)]) {
-        [self.deleagte imageBrowserSubViewSingleTapWithModel:_imageBrowserModel];
+    if ([self.delegate respondsToSelector:@selector(imageBrowserSubViewSingleTapWithModel:)]) {
+        [self.delegate imageBrowserSubViewSingleTapWithModel:_imageBrowserModel];
     }
 }
 
@@ -119,8 +119,8 @@
     CGFloat contentOffsetY = scrollView.contentOffset.y;
     if ((contentOffsetY<0 && _touchFingerNumber==1) && (velocity.y<0 && fabs(velocity.y)>fabs(velocity.x))) {
         //如果是向下滑动才触发消失的操作。
-        if ([self.deleagte respondsToSelector:@selector(imageBrowserSubViewSingleTapWithModel:)]) {
-            [self.deleagte imageBrowserSubViewSingleTapWithModel:_imageBrowserModel];
+        if ([self.delegate respondsToSelector:@selector(imageBrowserSubViewSingleTapWithModel:)]) {
+            [self.delegate imageBrowserSubViewSingleTapWithModel:_imageBrowserModel];
         }
     } else {
         [self changeSizeCenterY:0.0];
@@ -135,8 +135,8 @@
 - (void)changeSizeCenterY:(CGFloat)contentOffsetY {
     //contentOffsetY 为负值
     CGFloat multiple = (Screen_Height + contentOffsetY*1.75)/Screen_Height;
-    if ([self.deleagte respondsToSelector:@selector(imageBrowserSubViewTouchMoveChangeMainViewAlpha:)]) {
-        [self.deleagte imageBrowserSubViewTouchMoveChangeMainViewAlpha:multiple];
+    if ([self.delegate respondsToSelector:@selector(imageBrowserSubViewTouchMoveChangeMainViewAlpha:)]) {
+        [self.delegate imageBrowserSubViewTouchMoveChangeMainViewAlpha:multiple];
     }
     multiple = multiple>0.4?multiple:0.4;
     self.subScrollView.transform = CGAffineTransformMakeScale(multiple, multiple);

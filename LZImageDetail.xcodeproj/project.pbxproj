@@ -18,9 +18,13 @@
 		FA268B3B208F29970003D558 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA268B3A208F29970003D558 /* main.m */; };
 		FA268B45208F29980003D558 /* LZImageDetailTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA268B44208F29980003D558 /* LZImageDetailTests.m */; };
 		FA268B50208F29980003D558 /* LZImageDetailUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA268B4F208F29980003D558 /* LZImageDetailUITests.m */; };
-		FA6DD8C22094204D00FC810D /* LZImageBrowserMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6DD8C12094204D00FC810D /* LZImageBrowserMainView.m */; };
-		FA6DD8C52094207700FC810D /* LZImageBrowserSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6DD8C42094207700FC810D /* LZImageBrowserSubView.m */; };
-		FA6DD8C82094212700FC810D /* LZImageBrowserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6DD8C72094212700FC810D /* LZImageBrowserModel.m */; };
+		FABDBEDA20FDD95900C61943 /* LZImageBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABDBECC20FDD95900C61943 /* LZImageBrowserViewController.m */; };
+		FABDBEDB20FDD95900C61943 /* LZImageBrowserSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = FABDBECE20FDD95900C61943 /* LZImageBrowserSubView.m */; };
+		FABDBEDC20FDD95900C61943 /* LZImageBrowserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FABDBED220FDD95900C61943 /* LZImageBrowserModel.m */; };
+		FABDBEDD20FDD95900C61943 /* LZImageBrowserForceTouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FABDBED320FDD95900C61943 /* LZImageBrowserForceTouchViewController.m */; };
+		FABDBEDE20FDD95900C61943 /* LZImageBrowserMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FABDBED420FDD95900C61943 /* LZImageBrowserMainView.m */; };
+		FABDBEDF20FDD95900C61943 /* LZImageBrowserTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = FABDBED620FDD95900C61943 /* LZImageBrowserTranslation.m */; };
+		FABDBEE020FDD95900C61943 /* LZImageBrowserManger.m in Sources */ = {isa = PBXBuildFile; fileRef = FABDBED820FDD95900C61943 /* LZImageBrowserManger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,13 +70,21 @@
 		FA268B4B208F29980003D558 /* LZImageDetailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZImageDetailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA268B4F208F29980003D558 /* LZImageDetailUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZImageDetailUITests.m; sourceTree = "<group>"; };
 		FA268B51208F29980003D558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA6DD8BF20941F9D00FC810D /* LZImageBrowserHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZImageBrowserHeader.h; sourceTree = "<group>"; };
-		FA6DD8C02094204D00FC810D /* LZImageBrowserMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZImageBrowserMainView.h; sourceTree = "<group>"; };
-		FA6DD8C12094204D00FC810D /* LZImageBrowserMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZImageBrowserMainView.m; sourceTree = "<group>"; };
-		FA6DD8C32094207700FC810D /* LZImageBrowserSubView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZImageBrowserSubView.h; sourceTree = "<group>"; };
-		FA6DD8C42094207700FC810D /* LZImageBrowserSubView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZImageBrowserSubView.m; sourceTree = "<group>"; };
-		FA6DD8C62094212700FC810D /* LZImageBrowserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZImageBrowserModel.h; sourceTree = "<group>"; };
-		FA6DD8C72094212700FC810D /* LZImageBrowserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZImageBrowserModel.m; sourceTree = "<group>"; };
+		FABDBECB20FDD95900C61943 /* LZImageBrowserForceTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZImageBrowserForceTouchViewController.h; sourceTree = "<group>"; };
+		FABDBECC20FDD95900C61943 /* LZImageBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZImageBrowserViewController.m; sourceTree = "<group>"; };
+		FABDBECD20FDD95900C61943 /* LZImageBrowserTranslation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZImageBrowserTranslation.h; sourceTree = "<group>"; };
+		FABDBECE20FDD95900C61943 /* LZImageBrowserSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZImageBrowserSubView.m; sourceTree = "<group>"; };
+		FABDBECF20FDD95900C61943 /* LZImageBrowserMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZImageBrowserMainView.h; sourceTree = "<group>"; };
+		FABDBED020FDD95900C61943 /* LZImageBrowserManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZImageBrowserManger.h; sourceTree = "<group>"; };
+		FABDBED120FDD95900C61943 /* LZImageBrowserHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZImageBrowserHeader.h; sourceTree = "<group>"; };
+		FABDBED220FDD95900C61943 /* LZImageBrowserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZImageBrowserModel.m; sourceTree = "<group>"; };
+		FABDBED320FDD95900C61943 /* LZImageBrowserForceTouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZImageBrowserForceTouchViewController.m; sourceTree = "<group>"; };
+		FABDBED420FDD95900C61943 /* LZImageBrowserMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZImageBrowserMainView.m; sourceTree = "<group>"; };
+		FABDBED520FDD95900C61943 /* LZImageBrowserSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZImageBrowserSubView.h; sourceTree = "<group>"; };
+		FABDBED620FDD95900C61943 /* LZImageBrowserTranslation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZImageBrowserTranslation.m; sourceTree = "<group>"; };
+		FABDBED720FDD95900C61943 /* LZImageBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZImageBrowserViewController.h; sourceTree = "<group>"; };
+		FABDBED820FDD95900C61943 /* LZImageBrowserManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZImageBrowserManger.m; sourceTree = "<group>"; };
+		FABDBED920FDD95900C61943 /* LZImageBrowserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZImageBrowserModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +163,7 @@
 		FA268B2A208F29960003D558 /* LZImageDetail */ = {
 			isa = PBXGroup;
 			children = (
-				FA4E32CF209980A0004DEB17 /* LZImageBrowser */,
+				FABDBECA20FDD95900C61943 /* LZImageBrowser */,
 				FA268B2B208F29960003D558 /* AppDelegate.h */,
 				FA268B2C208F29960003D558 /* AppDelegate.m */,
 				FA268B2E208F29960003D558 /* ViewController.h */,
@@ -183,16 +195,24 @@
 			path = LZImageDetailUITests;
 			sourceTree = "<group>";
 		};
-		FA4E32CF209980A0004DEB17 /* LZImageBrowser */ = {
+		FABDBECA20FDD95900C61943 /* LZImageBrowser */ = {
 			isa = PBXGroup;
 			children = (
-				FA6DD8BF20941F9D00FC810D /* LZImageBrowserHeader.h */,
-				FA6DD8C02094204D00FC810D /* LZImageBrowserMainView.h */,
-				FA6DD8C12094204D00FC810D /* LZImageBrowserMainView.m */,
-				FA6DD8C32094207700FC810D /* LZImageBrowserSubView.h */,
-				FA6DD8C42094207700FC810D /* LZImageBrowserSubView.m */,
-				FA6DD8C62094212700FC810D /* LZImageBrowserModel.h */,
-				FA6DD8C72094212700FC810D /* LZImageBrowserModel.m */,
+				FABDBED120FDD95900C61943 /* LZImageBrowserHeader.h */,
+				FABDBED020FDD95900C61943 /* LZImageBrowserManger.h */,
+				FABDBED820FDD95900C61943 /* LZImageBrowserManger.m */,
+				FABDBECB20FDD95900C61943 /* LZImageBrowserForceTouchViewController.h */,
+				FABDBED320FDD95900C61943 /* LZImageBrowserForceTouchViewController.m */,
+				FABDBECD20FDD95900C61943 /* LZImageBrowserTranslation.h */,
+				FABDBED620FDD95900C61943 /* LZImageBrowserTranslation.m */,
+				FABDBED720FDD95900C61943 /* LZImageBrowserViewController.h */,
+				FABDBECC20FDD95900C61943 /* LZImageBrowserViewController.m */,
+				FABDBECF20FDD95900C61943 /* LZImageBrowserMainView.h */,
+				FABDBED420FDD95900C61943 /* LZImageBrowserMainView.m */,
+				FABDBED520FDD95900C61943 /* LZImageBrowserSubView.h */,
+				FABDBECE20FDD95900C61943 /* LZImageBrowserSubView.m */,
+				FABDBED920FDD95900C61943 /* LZImageBrowserModel.h */,
+				FABDBED220FDD95900C61943 /* LZImageBrowserModel.m */,
 			);
 			path = LZImageBrowser;
 			sourceTree = "<group>";
@@ -387,12 +407,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA6DD8C22094204D00FC810D /* LZImageBrowserMainView.m in Sources */,
+				FABDBEDE20FDD95900C61943 /* LZImageBrowserMainView.m in Sources */,
 				FA268B30208F29960003D558 /* ViewController.m in Sources */,
+				FABDBEDA20FDD95900C61943 /* LZImageBrowserViewController.m in Sources */,
 				FA268B3B208F29970003D558 /* main.m in Sources */,
-				FA6DD8C52094207700FC810D /* LZImageBrowserSubView.m in Sources */,
-				FA6DD8C82094212700FC810D /* LZImageBrowserModel.m in Sources */,
+				FABDBEE020FDD95900C61943 /* LZImageBrowserManger.m in Sources */,
+				FABDBEDB20FDD95900C61943 /* LZImageBrowserSubView.m in Sources */,
+				FABDBEDC20FDD95900C61943 /* LZImageBrowserModel.m in Sources */,
+				FABDBEDF20FDD95900C61943 /* LZImageBrowserTranslation.m in Sources */,
 				FA268B2D208F29960003D558 /* AppDelegate.m in Sources */,
+				FABDBEDD20FDD95900C61943 /* LZImageBrowserForceTouchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

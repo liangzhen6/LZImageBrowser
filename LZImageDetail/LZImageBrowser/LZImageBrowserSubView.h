@@ -19,7 +19,7 @@
 
 @interface LZImageBrowserSubView : UIView
 
-@property(nonatomic,weak)id<LZImageBrowserSubViewDelegate> deleagte;
+@property(nonatomic,weak)id<LZImageBrowserSubViewDelegate> delegate;
 
 - (id)initWithFrame:(CGRect)frame ImageBrowserModel:(LZImageBrowserModel *)imageBrowserModel;
 

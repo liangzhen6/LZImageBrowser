@@ -14,10 +14,8 @@
 @interface LZImageBrowserMainView ()<UIScrollViewDelegate,LZImageBrowserSubViewDelegate>
 @property(nonatomic,strong)UIScrollView * mainScrollView;
 @property(nonatomic,strong)UIPageControl * pageControl;
-@property(nonatomic,strong)NSMutableArray * dataSource;
 @property(nonatomic,copy)NSArray * imageUrls;
 @property(nonatomic,copy)NSArray * originImageViews;
-@property(nonatomic,assign)NSInteger selectPage;
 
 @end
 
@@ -45,13 +43,12 @@
 }
 
 - (void)initView {
-    self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:1.0];
     //1.初始化 mianScrollView
     [self addSubview:self.mainScrollView];
     //加入子视图
     for (NSInteger i = 0; i < self.dataSource.count; i++) {
         LZImageBrowserSubView * imageBrowserSubView = [[LZImageBrowserSubView alloc] initWithFrame:CGRectMake((Screen_Width + SpaceWidth)*i, 0, Screen_Width, Screen_Height) ImageBrowserModel:self.dataSource[i]];
-        imageBrowserSubView.deleagte = self;
+        imageBrowserSubView.delegate = self;
         [self.mainScrollView addSubview:imageBrowserSubView];
     }
     [self.mainScrollView setContentSize:CGSizeMake((Screen_Width + SpaceWidth)*self.dataSource.count, 0)];
@@ -63,65 +60,30 @@
     self.pageControl.frame = CGRectMake(Screen_Width/2-size.width/2, Screen_Height-size.height-20, size.width, size.height);
     self.pageControl.currentPage = _selectPage;
     
-    self.mainScrollView.hidden = YES;
-    self.pageControl.hidden = YES;
 }
 
-- (void)showImageBrowserMainView {
-    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
-    [window addSubview:self];
-    
-    LZImageBrowserModel * currentModel = self.dataSource[_selectPage];
-    CGRect frame = [currentModel smallImageViewframeOriginWindow];
-    UIImage * image = [currentModel getCurrentImage];
-    UIImageView * imageView = [self addShadowImageViewWithFrame:frame image:image];
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        imageView.frame = [currentModel imageViewframeShowWindow];
-    } completion:^(BOOL finished) {
+- (void)subViewHidden:(BOOL)isHidden {
+    if (isHidden) {
+        self.mainScrollView.hidden = YES;
+        self.pageControl.hidden = YES;
+    } else {
         self.mainScrollView.hidden = NO;
         self.pageControl.hidden = NO;
-        [imageView removeFromSuperview];
-    }];
-}
-
-- (void)dismissImageBrowserMainView {
-    
-    LZImageBrowserModel * currentModel = self.dataSource[_selectPage];
-    CGRect frame = [currentModel bigImageViewFrameOnScrollView];
-    UIImage * image = [currentModel getCurrentImage];
-    UIImageView * imageView = [self addShadowImageViewWithFrame:frame image:image];
-
-    self.mainScrollView.hidden = YES;
-    self.pageControl.hidden = YES;
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        imageView.frame = [currentModel smallImageViewframeOriginWindow];
-        self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.0];
-    } completion:^(BOOL finished) {
-        [imageView removeFromSuperview];
-        [self removeFromSuperview];
-    }];
-}
-
-- (UIImageView *)addShadowImageViewWithFrame:(CGRect)frame image:(UIImage *)image {
-    UIImageView * imageView = [[UIImageView alloc] initWithFrame:frame];
-    imageView.contentMode = UIViewContentModeScaleAspectFill;
-    imageView.clipsToBounds = YES;
-    imageView.image = image;
-    [self addSubview:imageView];
-    return imageView;
+    }
 }
 
 #pragma mark -LZImageBrowserSubViewDelegate
 - (void)imageBrowserSubViewSingleTapWithModel:(LZImageBrowserModel *)imageBrowserModel {
-    [self dismissImageBrowserMainView];
+    if ([self.delegate respondsToSelector:@selector(imageBrowserMianViewSingleTapWithModel:)]) {
+        [self.delegate imageBrowserMianViewSingleTapWithModel:imageBrowserModel];
+    }
 }
 
 - (void)imageBrowserSubViewTouchMoveChangeMainViewAlpha:(CGFloat)alpha {
-    self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:alpha];
+    if ([self.delegate respondsToSelector:@selector(imageBrowserMainViewTouchMoveChangeMainViewAlpha:)]) {
+        [self.delegate imageBrowserMainViewTouchMoveChangeMainViewAlpha:alpha];
+    }
 }
-
 
 #pragma mark -scrollView delegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
