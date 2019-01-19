@@ -31,7 +31,8 @@
     [scrollView setContentSize:CGSizeMake(0, 1200)];
     
     CGFloat W = (Screen_Width-20-10)/3;
-    NSArray * images =  @[@"http://olxnvuztq.bkt.clouddn.com/s01.jpg",@"http://olxnvuztq.bkt.clouddn.com/s02.jpg",@"http://olxnvuztq.bkt.clouddn.com/s03.jpg",@"http://olxnvuztq.bkt.clouddn.com/s04.jpg",@"http://olxnvuztq.bkt.clouddn.com/s05.jpg",@"http://olxnvuztq.bkt.clouddn.com/s06.jpg"];;
+#warning 有时候图片的链接地址会无效，更换为有效的链接地址即可
+    NSArray * images = @[@"http://img01.cztv.com/201508/19/9008d57f59984e7b188ab69fbb458915.jpg",@"http://img2.100bt.com/upload/ttq/20140315/1394865797382_middle.jpeg",@"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1301/23/c0/17652199_1358923371562.jpg",@"https://b-ssl.duitang.com/uploads/item/201508/25/20150825230502_2nPUC.thumb.700_0.jpeg"];
     NSInteger count = (images.count)%3?(images.count/3+1):images.count/3;
     UIView * backView = [[UIView alloc] initWithFrame:CGRectMake(10, 200, Screen_Width-20, count*W + (count-1)*5)];
     [scrollView addSubview:backView];
@@ -50,7 +51,8 @@
         [originImageViews addObject:imageView];
     }
     
-    NSArray * bigImages = @[@"http://olxnvuztq.bkt.clouddn.com/b01.jpg",@"http://olxnvuztq.bkt.clouddn.com/b02.jpg",@"http://olxnvuztq.bkt.clouddn.com/b03.jpg",@"http://olxnvuztq.bkt.clouddn.com/b04.jpg",@"http://olxnvuztq.bkt.clouddn.com/b05.jpg",@"http://olxnvuztq.bkt.clouddn.com/b06.jpg"];
+#warning 有时候图片的链接地址会无效，更换为有效的链接地址即可
+    NSArray * bigImages = @[@"http://img01.cztv.com/201508/19/9008d57f59984e7b188ab69fbb458915.jpg",@"http://img2.100bt.com/upload/ttq/20140315/1394865797382_middle.jpeg",@"http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1301/23/c0/17652199_1358923371562.jpg",@"https://b-ssl.duitang.com/uploads/item/201508/25/20150825230502_2nPUC.thumb.700_0.jpeg"];
     //初始化 manger
     LZImageBrowserManger *imageBrowserManger = [LZImageBrowserManger imageBrowserMangerWithUrlStr:bigImages originImageViews:originImageViews originController:self forceTouch:YES forceTouchActionTitles:@[@"赞", @"评论", @"收藏"] forceTouchActionComplete:^(NSInteger selectIndex, NSString *title) {
         NSLog(@"当前选中%ld--标题%@",(long)selectIndex, title);
